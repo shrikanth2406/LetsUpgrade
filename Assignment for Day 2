@@ -1,33 +1,16 @@
-Age=int(input('Enter Your Age : '))
-Gender= input("Choose Your Gender (M/F) : ")
-if Age>=65:
+p = float(input("Enter the principal amount: "))
+t = float(input("Enter the time period (in years): "))
+gender = input("Enter your gender (Male/Female): ")
+age = int(input("Enter your age: "))
 
-if Gender=='M':
+if gender == "Female" and age >= 60:
+    r = 0.08
+elif gender == "Female" and age < 60:
+    r = 0.06
+elif gender == "Male" and age >= 60:
+    r = 0.07
+elif gender == "Male" and age < 60:
+    r = 0.05
 
-Capital=int(input("Enter Capital Amount : "))
-Time= int(input("Enter Time In Years : "))
-SimInt= Capital*0.07*Time
-print("Simple interest of the give Capital : ", Capital, "and Time in Years : ", Time, "is", SimInt)
-
-else:
-
-Capital=int(input("Enter Capital Amount : "))
-Time= int(input("Enter Time In Years : "))
-SimInt= Capital*0.08*Time
-print("Simple interest of the give Capital : ", Capital, "and Time in Years : ", Time, "is", SimInt)
-
-else:
-
-if Gender=='M':
-
-Capital=int(input("Enter Capital Amount : "))
-Time= int(input("Enter Time In Years : "))
-SimInt= Capital*0.05*Time
-print("Simple interest of the give Capital : ", Capital, "and Time in Years : ", Time, "is", SimInt)
-
-else:
-
-Capital=int(input("Enter Capital Amount : "))
-Time= int(input("Enter Time In Years : "))
-SimInt= Capital*0.06*Time
-print("Simple interest of the give Capital : ", Capital, "and Time in Years : ", Time, "is", SimInt)
+si = (p * t * r) / 100
+print("Simple Interest = ", si)
