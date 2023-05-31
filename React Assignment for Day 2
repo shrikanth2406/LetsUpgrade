@@ -1,0 +1,24 @@
+javascript
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [bgColor, setBgColor] = useState('white');
+
+  const toggleColor = () => {
+    if (bgColor === 'white') {
+      setBgColor('black');
+    } else {
+      setBgColor('white');
+    }
+  };
+
+  return (
+    <div className="App" style={{ backgroundColor: bgColor }}>
+      <h1>Toggle Background Color</h1>
+      <button onClick={toggleColor}>Toggle</button>
+    </div>
+  );
+}
+
+export default App;
